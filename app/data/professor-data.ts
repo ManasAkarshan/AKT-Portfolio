@@ -1,8 +1,8 @@
 import { ProfessorData } from "../types/portfolio";
 
 export const professorData: ProfessorData = {
-  name: "Dr. Anand Kumar Thakur",
-  title: "Assistant Professor of Zoology",
+  name: "Anand K. Thakur",
+  title: "Assistant Professor",
   institution: "Ranchi University, Ranchi",
   department: "University Department of Zoology",
   bio: [
@@ -26,10 +26,10 @@ export const professorData: ProfessorData = {
       details: "CSIR-UGC JRF-NET qualified (2002)"
     },
     {
-      degree: "M.Sc. in Entomology",
+      degree: "M.Sc. in Zoology (Entomology)",
       institution: "Magadh University",
       year: "1999",
-      description: "First Class (70.62%)",
+      description: "University Topper",
       details: ""
     },
   ],
@@ -41,8 +41,8 @@ export const professorData: ProfessorData = {
       responsibilities: [
         "Teaching and research in Entomology and Zoology",
         "Guided 7 Ph.D. scholars in the fields of entomology and environmental science, 3 has been awarded Ph.D. and 1 submitted thesis",
-        "Founder Coordinator of University Department of Yoga (2017-2022)",
-        "Founder Director of Community Radio Station (2017-2022)"
+        "Founder Coordinator of School of Yoga (2017-2021)",
+        "Founder Director of Radio Khanchi 90.4FM (2017-2022)"
       ]
     },
     {
@@ -50,10 +50,11 @@ export const professorData: ProfessorData = {
       organization: "Various Committees",
       period: "2010 – Present",
       responsibilities: [
-        "Member, Institutional Management Committee, ICAR-ATARI, Patna (2024)",
-        "Principal Investigator for DST-Vigyan Prasar projects on science communication",
+        "Member, Institutional Management Committee, ICAR-ATARI, Patna (2024 - present)",
+        "Member, core committee, Vigyan prasar, DST, Govt. of India (2021 - 2022)",
+        "Principal Investigator for DST-Vigyan Prasar projects on science communication (2021 - 2022)",
         "Board of Studies member for multiple programs at Ranchi University",
-        "Subject Expert for PhD vivas at various universities"
+        "Subject Expert for PhD viva-voce at various universities"
       ]
     },
     {
@@ -64,11 +65,18 @@ export const professorData: ProfessorData = {
         "Hosted 43+ programs on Doordarshan and 7 on AIR",
         "Radio Jockey at Radio Mirchi, Patna (2007-2008)",
         "Master of Ceremony for 200+ academic/cultural events",
-        "YouTube channel with 675 educational videos (13,000+ minutes)"
+        "YouTube channel with 600+ educational videos (13,000+ minutes)"
       ]
     }
   ],
   publications: [
+    {
+      title: "Comperative assesment of different rearring diets on the developmental and reproductive behaviour of Fall Armyworm Spodoptera frugiperda, (Lepidoptera: Noctuidae)",
+      authors: "A.K. Thakur, Banra, S., Chaudhary, J.S. et al.",
+      journal: "Neotropical Entomology [SCOPUS, IF:1.0]",
+      year: "2025",
+      doi: "https://doi.org/10.1007/s13744-025-01256-8 https://link.springer.com/article/10.1007/s13744-025-01256-8"
+    },
     {
       title: "Substantially altered bacterial diversity associated with developmental stages of litchi stink bug",
       authors: "Anita Kumari, A.K. Thakur et al.",
@@ -156,40 +164,40 @@ export const professorData: ProfessorData = {
   ],
   oers: [
     {
-      title: "SUGAR TRANSLOCATION - 2",
+      title: "AXIS FORMATION OF C ELEGANS 2023",
       description: "675+ educational videos on YouTube covering various topics in zoology, entomology, and science communication",
       icon: "BookOpen",
-      videoUrl: "https://www.youtube.com/embed/k_Y0IZjAcKo"
+      videoUrl: "https://youtu.be/H4En-QrRlLU?si=dStkug2rFYv0Fowk"
     },
     {
-      title: "SUGAR TRANSLOCATION - 1",
+      title: "PARACRINE FACTORS-1",
       description: "Managed Radio Khanchi 90.4FM, creating educational content and programs for community development",
       icon: "Users",
-      videoUrl: "https://www.youtube.com/embed/bMjoXCTF7ZY"
+      videoUrl: "https://youtu.be/OdUeuS784k0?si=PdSae4U3H07Hjyrp"
     },
     {
-      title: "PHOTORESPIRATION - 2",
+      title: "PARACRINE FACTORS-2",
       description: "Open access publications, research papers, and educational materials available for students and researchers",
       icon: "Globe",
-      videoUrl: "https://www.youtube.com/embed/OQIXu9Xr79I"
+      videoUrl: "https://youtu.be/xaiHemFRsY4?si=W0B5deKNTU-8zSSY"
     },
     {
-      title: "PHOTORESPIRATION - 1",
+      title: "SPECIFICATION - 1",
       description: "Open access publications, research papers, and educational materials available for students and researchers",
       icon: "Globe",
-      videoUrl: "https://youtu.be/ENHk_0-H5bk?si=23Du0RRTFp4d2TKt"
+      videoUrl: "https://youtu.be/Ok55tXfCksg?si=6U7_DwN2Q7Nnphfw"
     },
     {
-      title: "CAM (Crassulacean Acid Metabolism)",
+      title: "SPECIFICATION - 2",
       description: "Open access publications, research papers, and educational materials available for students and researchers",
       icon: "Globe",
-      videoUrl: "https://youtu.be/gx1LI8U3-64?si=aCgGzdFACK5KyvoO"
+      videoUrl: "https://youtu.be/qUlvdYaWSV4?si=SMGGZfu9dWkuVE9a"
     },
     {
-      title: "C4 CYCLE - 3",
+      title: "RNA-1",
       description: "Open access publications, research papers, and educational materials available for students and researchers",
       icon: "Globe",
-      videoUrl: "https://youtu.be/aTvL3ziZfhk?si=pozelmBvXEa32gUP"
+      videoUrl: "https://youtu.be/qERi39vZv2g?si=poKdCSwpQMIxQSij"
     },
   ]
 }

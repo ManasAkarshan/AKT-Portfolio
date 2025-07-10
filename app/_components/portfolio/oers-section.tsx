@@ -24,11 +24,8 @@ export function OERsSection({ oersData, socialLinks, channelUrl }: OERsSectionPr
   const [videoTitles, setVideoTitles] = useState<string[]>([])
   const [playingVideos, setPlayingVideos] = useState<{ [key: number]: boolean }>({})
   const [isLoading, setIsLoading] = useState(true)
-  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    setMounted(true)
-    
     const fetchVideoTitles = async () => {
       try {
         const titles = await Promise.all(
@@ -62,65 +59,7 @@ export function OERsSection({ oersData, socialLinks, channelUrl }: OERsSectionPr
     }))
   }
 
-  // Don't render anything until mounted to prevent hydration mismatch
-  if (!mounted) {
-    return (
-      <section id="oers" className="py-16 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
-                Open Educational Resources (OERs)
-              </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary/60 mx-auto rounded-full" />
-            </div>
-            
-            {/* Loading state */}
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
-              {oersData.map((oer, index) => (
-                <Card 
-                  key={index} 
-                  className="relative overflow-hidden bg-gradient-to-br from-card to-card/80 hover:from-card/90 hover:to-card/70 transition-all duration-300 hover:shadow-2xl border-0 shadow-lg"
-                >
-                  <CardHeader className="pb-3">
-                    <CardTitle className="text-lg text-center font-bold bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent transition-all duration-300 min-h-[3rem] flex items-center justify-center line-clamp-2">
-                      {oer.title}
-                    </CardTitle>
-                  </CardHeader>
-                  
-                  <CardContent className="p-4">
-                    {oer.videoUrl && (
-                      <div className="space-y-4">
-                        <div className="aspect-video w-full relative overflow-hidden bg-black rounded-lg">
-                          <img
-                            src={`https://img.youtube.com/vi/${extractVideoId(oer.videoUrl)}/maxresdefault.jpg`}
-                            alt={oer.title}
-                            className="w-full h-full object-cover"
-                            onError={(e) => {
-                              const target = e.target as HTMLImageElement;
-                              const videoId = extractVideoId(oer.videoUrl || '');
-                              if (videoId) {
-                                target.src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
-                              }
-                            }}
-                          />
-                          <div className="absolute inset-0 flex items-center justify-center">
-                            <div className="bg-black/50 backdrop-blur-sm rounded-full p-6">
-                              <div className="w-0 h-0 border-l-[20px] border-l-white border-t-[14px] border-t-transparent border-b-[14px] border-b-transparent ml-1" />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    )}
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-    )
-  }
+
 
   return (
     <section id="oers" className="py-16 bg-muted/30">
@@ -157,7 +96,7 @@ export function OERsSection({ oersData, socialLinks, channelUrl }: OERsSectionPr
                         {playingVideos[index] ? (
                           /* Embedded Video Player */
                           <iframe
-                            src={`${oer.videoUrl}?autoplay=1`}
+                            src={`https://www.youtube.com/embed/${extractVideoId(oer.videoUrl)}?autoplay=1`}
                             title={!isLoading && videoTitles[index] ? videoTitles[index] : oer.title}
                             className="w-full h-full"
                             frameBorder="0"

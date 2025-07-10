@@ -31,7 +31,7 @@ export function ResearchSection({ researchAreas, stats, publications, socialLink
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <BookOpen className="w-5 h-5" />
-                  Research Areas
+                  Thrust Areas
                 </CardTitle>
               </CardHeader>
               <CardContent>

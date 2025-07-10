@@ -29,11 +29,8 @@ const navigationItems = [
 export function EnhancedHeader({ name }: EnhancedHeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
-  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
-    
     const handleScroll = () => {
       const sections = navigationItems.map((item) => item.href.substring(1));
       const scrollPosition = window.scrollY + 100;
@@ -81,7 +78,7 @@ export function EnhancedHeader({ name }: EnhancedHeaderProps) {
                 onClick={() => handleLinkClick(item.href)}
                 className={cn(
                   "text-sm font-medium hover:text-primary transition-colors",
-                  mounted && activeSection === item.href && "text-primary"
+                  activeSection === item.href && "text-primary"
                 )}
               >
                 {item.label}
@@ -126,7 +123,7 @@ export function EnhancedHeader({ name }: EnhancedHeaderProps) {
                           className={cn(
                             "w-full text-left text-base font-medium py-2 px-4 rounded-md",
                             "hover:bg-accent hover:text-accent-foreground",
-                            mounted && activeSection === item.href
+                            activeSection === item.href
                               ? "bg-muted text-primary"
                               : "text-muted-foreground"
                           )}

@@ -30,7 +30,7 @@ export function HeroSection({
           <div className="mb-8">
             <Avatar className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 mx-auto mb-6 border-4 border-background shadow-lg">
               <AvatarImage 
-                src="/profile_pic.jpeg" 
+                src="/profile.jpeg" 
                 alt={name} 
                 className="object-cover object-center"
               />
@@ -41,7 +41,7 @@ export function HeroSection({
             <h1 className="text-4xl md:text-5xl font-bold mb-4">{name}</h1>
             <p className="text-xl text-muted-foreground mb-6">{title}</p>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              {institution} • {department}
+            {department} • {institution} 
             </p>
           </div>
           <div className="flex flex-wrap justify-center gap-4">
