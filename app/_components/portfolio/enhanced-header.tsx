@@ -148,7 +148,7 @@ export function EnhancedHeader({ name }: EnhancedHeaderProps) {
                           href="mailto:akthakur.ranchiuniv@gmail.com"
                           className="hover:text-primary"
                         >
-                          akthakur.ranchiuniv@gmail.com
+                          fmruanand@gmail.com
                         </a>
                       </li>
                       <li>
@@ -156,7 +156,7 @@ export function EnhancedHeader({ name }: EnhancedHeaderProps) {
                           href="tel:+919835984490"
                           className="hover:text-primary"
                         >
-                          +91 98359 84490
+                          +91 98350 56547
                         </a>
                       </li>
                     </ul>
