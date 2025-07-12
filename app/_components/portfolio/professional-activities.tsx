@@ -49,7 +49,6 @@ export function ProfessionalActivities() {
                 <ul className="space-y-2 text-muted-foreground">
                   <li>• Member, Board of Studies (Zoology), Ranchi University</li>
                   <li>• Subject Expert for viva, evaluation, and faculty recruitment</li>
-                  <li>• Academic Council Member, Jamshedpur Women's University</li>
                 </ul>
               </CardContent>
             </Card>
