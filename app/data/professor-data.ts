@@ -200,8 +200,105 @@ export const professorData: ProfessorData = {
       icon: "Globe",
       videoUrl: "https://youtu.be/qERi39vZv2g?si=poKdCSwpQMIxQSij"
     },
-  ]
+  ],
+  
+  
 }
+
+ // Gallery images data
+ export const galleryImages = [
+  {
+    id: "1",
+    src: "/profile.jpeg",
+    alt: "Professional headshot",
+    title: "Professional Profile"
+  },
+  {
+    id: "2", 
+    src: "/profile_pic.jpeg",
+    alt: "Academic profile picture",
+    title: "Academic Profile"
+  },
+  {
+    id: "3",
+    src: "/WhatsApp Image 2025-07-11 at 10.11.24 PM.jpeg",
+    alt: "Academic achievement moment",
+    title: "Academic Achievement"
+  },
+  {
+    id: "4",
+    src: "/WhatsApp Image 2025-07-11 at 10.11.25 PM.jpeg",
+    alt: "Research presentation",
+    title: "Research Presentation"
+  },
+  {
+    id: "5",
+    src: "/WhatsApp Image 2025-07-11 at 10.11.25 PM (1).jpeg",
+    alt: "Conference participation",
+    title: "Conference Participation"
+  },
+  {
+    id: "6",
+    src: "/WhatsApp Image 2025-07-11 at 10.11.25 PM (2).jpeg",
+    alt: "Academic collaboration",
+    title: "Academic Collaboration"
+  },
+  {
+    id: "7",
+    src: "/WhatsApp Image 2025-07-11 at 10.11.58 PM.jpeg",
+    alt: "Teaching moment",
+    title: "Teaching Excellence"
+  },
+  {
+    id: "8",
+    src: "/WhatsApp Image 2025-07-11 at 10.11.58 PM (1).jpeg",
+    alt: "Student interaction",
+    title: "Student Interaction"
+  },
+  {
+    id: "9",
+    src: "/WhatsApp Image 2025-07-11 at 10.14.32 PM.jpeg",
+    alt: "Research work",
+    title: "Research Work"
+  },
+  {
+    id: "10",
+    src: "/WhatsApp Image 2025-07-11 at 10.15.01 PM.jpeg",
+    alt: "Academic discussion",
+    title: "Academic Discussion"
+  },
+  {
+    id: "11",
+    src: "/WhatsApp Image 2025-07-11 at 10.15.23 PM.jpeg",
+    alt: "Professional development",
+    title: "Professional Development"
+  },
+  {
+    id: "12",
+    src: "/WhatsApp Image 2025-07-11 at 10.16.10 PM.jpeg",
+    alt: "Academic milestone",
+    title: "Academic Milestone"
+  },
+  {
+    id: "13",
+    src: "/WhatsApp Image 2025-07-11 at 10.16.52 PM.jpeg",
+    alt: "Research collaboration",
+    title: "Research Collaboration"
+  },
+  {
+    id: "14",
+    src: "/WhatsApp Image 2025-07-11 at 10.18.05 PM.jpeg",
+    alt: "Academic excellence",
+    title: "Academic Excellence"
+  },
+  {
+    id: "15",
+    src: "/WhatsApp Image 2025-07-11 at 10.18.24 PM.jpeg",
+    alt: "Professional achievement",
+    title: "Professional Achievement"
+  }
+]
+
 
 
 

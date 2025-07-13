@@ -1,4 +1,4 @@
-import { professorData } from "./data/professor-data"
+import { galleryImages, professorData } from "./data/professor-data"
 import { Header } from "./_components/portfolio/header"
 import { HeroSection } from "./_components/portfolio/hero-section"
 import { AboutSection } from "./_components/portfolio/about-section"
@@ -11,6 +11,7 @@ import { OERsSection } from "./_components/portfolio/oers-section"
 import { ContactSection } from "./_components/portfolio/contact-section"
 import { Footer } from "./_components/portfolio/footer"
 import { EnhancedHeader } from "./_components/portfolio/enhanced-header"
+import { GallerySection } from "./_components/portfolio/gallery-section"
 import { BookOpen, Users, Globe } from "lucide-react"
 
 export default function ProfessorPortfolio() {
@@ -27,6 +28,7 @@ export default function ProfessorPortfolio() {
     icon: iconMap[oer.icon as keyof typeof iconMap] || <BookOpen className="w-5 h-5" />
   }))
 
+ 
   return (
     <div className="min-h-screen bg-background">
       <EnhancedHeader name={professorData.name} />
@@ -71,6 +73,8 @@ export default function ProfessorPortfolio() {
         }}
         channelUrl="https://www.youtube.com/@anandsir8152"
       />
+
+      <GallerySection images={galleryImages} />
 
       <ProfessionalActivities />
 

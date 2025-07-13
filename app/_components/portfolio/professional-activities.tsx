@@ -3,7 +3,7 @@ import { Users, Calendar, BookOpen } from "lucide-react"
 
 export function ProfessionalActivities() {
   return (
-    <section className="py-16">
+    <section className="py-16  bg-muted/50">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Professional Activities</h2>
