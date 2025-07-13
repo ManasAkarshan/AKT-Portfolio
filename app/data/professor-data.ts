@@ -40,6 +40,7 @@ export const professorData: ProfessorData = {
       period: "2008 – Present",
       responsibilities: [
         "Teaching and research in Entomology and Zoology",
+        "11+ years of UG and 7+ years of PG teaching experience",
         "Guided 7 Ph.D. scholars in the fields of entomology and environmental science, 3 has been awarded Ph.D. and 1 submitted thesis",
         "Founder Coordinator of School of Yoga (2017-2021)",
         "Founder Director of Radio Khanchi 90.4FM (2017-2022)"
@@ -51,7 +52,7 @@ export const professorData: ProfessorData = {
       period: "2010 – Present",
       responsibilities: [
         "Member, Institutional Management Committee, ICAR-ATARI, Patna (2024 - present)",
-        "Member, core committee, Vigyan prasar, DST, Govt. of India (2021 - 2022)",
+        "Member, Core Committees, Vigyan prasar, DST, Govt. of India (2021 - 2022)",
         "Principal Investigator for DST-Vigyan Prasar projects on science communication (2021 - 2022)",
         "Board of Studies member for multiple programs at Ranchi University",
         "Subject Expert for PhD viva-voce at various universities"
@@ -78,14 +79,14 @@ export const professorData: ProfessorData = {
       doi: "https://doi.org/10.1007/s13744-025-01256-8 https://link.springer.com/article/10.1007/s13744-025-01256-8"
     },
     {
-      title: "Substantially altered bacterial diversity associated with developmental stages of litchi stink bug",
+      title: "Substantially altered bacterial diversity associated with developmental stages of litchi stink bug, Tessaratoma javanica (Thunberg) (Hemiptera: Tessaratomidae)",
       authors: "Anita Kumari, A.K. Thakur et al.",
       journal: "Heliyon [SCOPUS, IF:4.0]",
       year: "2024",
       doi: "https://doi.org/10.1016/j.heliyon.2024.e32384"
     },
     {
-      title: "Bacterial communities and their predicted function change with life stages of Spodoptera frugiperda",
+      title: "Bacterial communities and their predicted function change with the life stages of invasive C-strain Spodoptera frugiperda (J. E. Smith, 1797) (Lepidoptera: Noctuidae)",
       authors: "Banra, Kumari, Thakur et al.",
       journal: "Biological Invasions [SCOPUS, IF:3.1]",
       year: "2024",

@@ -17,7 +17,7 @@ export function ProfessionalActivities() {
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-muted-foreground">
-                  <li>• Member, Editorial Board of Jigyasa Science Magazine</li>
+                  <li>• Member, Editorial Board of Books and Journals</li>
                   <li>• Reviewer for journals in entomology and environmental science</li>
                   <li>• Contributor to several government-published science magazines</li>
                 </ul>
@@ -33,8 +33,7 @@ export function ProfessionalActivities() {
               <CardContent>
                 <ul className="space-y-2 text-muted-foreground">
                   <li>• Organized 7+ international and national seminars</li>
-                  <li>• Delivered 60+ invited talks, webinars, and keynotes</li>
-                  <li>• Convenor, scientific and editorial committees for national conferences</li>
+                  <li>• Delivered 60+ invited talks in MMTTC-UGC, IITs, BHU, and other universities</li>
                 </ul>
               </CardContent>
             </Card>

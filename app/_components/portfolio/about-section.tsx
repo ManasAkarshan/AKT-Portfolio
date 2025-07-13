@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
-import { GraduationCap, BookOpen } from "lucide-react"
+import { GraduationCap, BookOpen, Waypoints } from "lucide-react"
 
 interface AboutSectionProps {
   bio: string[]
@@ -42,11 +42,18 @@ export function AboutSection({ bio, specializations, title, institution }: About
                       </p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-4  mb-4">
                     <BookOpen className="w-8 h-8 text-primary" />
                     <div>
                       <h3 className="font-semibold">Research Focus</h3>
                       <p className="text-sm text-muted-foreground">Insect Biodiversity & Ecology</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <Waypoints className="w-8 h-8 text-primary" />
+                    <div>
+                      <h3 className="font-semibold">Fellow and Member</h3>
+                      <p className="text-sm text-muted-foreground">ISCA, IETE, MSET</p>
                     </div>
                   </div>
                 </CardContent>
