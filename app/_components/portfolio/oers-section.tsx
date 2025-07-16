@@ -73,7 +73,7 @@ export function OERsSection({ oersData, socialLinks, channelUrl }: OERsSectionPr
           </div>
           
           {/* Three divs in grid view */}
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
             {oersData.map((oer, index) => {
               return (
               <Card 
