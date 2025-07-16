@@ -1,11 +1,15 @@
+import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Users, Calendar, BookOpen } from "lucide-react"
+import { Users, Calendar, BookOpen, ArrowRight } from "lucide-react"
+import Link from "next/link"
 
 export function ProfessionalActivities() {
   return (
     <section className="py-16  bg-muted/50">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
+          <div className="flex flex-col gap-8">
+          <div>
           <h2 className="text-3xl font-bold text-center mb-12">Professional Activities</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <Card>
@@ -66,6 +70,18 @@ export function ProfessionalActivities() {
                 </ul>
               </CardContent>
             </Card>
+          </div>
+          </div>
+
+          <Button className="mx-auto">
+            <Link href={'https://youtube.com/playlist?list=PLazcHcgimawC1NaccB5l7yH5mfcn0siaf&si=3B3O-ztuLm45hYiy'} target="_blank">
+              <div className="flex items-center gap-2">
+                Extension work
+                <ArrowRight className="w-4 h-4" />
+              </div>
+            </Link>
+          </Button>
+
           </div>
         </div>
       </div>

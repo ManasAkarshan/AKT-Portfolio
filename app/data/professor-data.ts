@@ -176,30 +176,6 @@ export const professorData: ProfessorData = {
       icon: "Users",
       videoUrl: "https://youtu.be/OdUeuS784k0?si=PdSae4U3H07Hjyrp"
     },
-    {
-      title: "PARACRINE FACTORS-2",
-      description: "Open access publications, research papers, and educational materials available for students and researchers",
-      icon: "Globe",
-      videoUrl: "https://youtu.be/xaiHemFRsY4?si=W0B5deKNTU-8zSSY"
-    },
-    {
-      title: "SPECIFICATION - 1",
-      description: "Open access publications, research papers, and educational materials available for students and researchers",
-      icon: "Globe",
-      videoUrl: "https://youtu.be/Ok55tXfCksg?si=6U7_DwN2Q7Nnphfw"
-    },
-    {
-      title: "SPECIFICATION - 2",
-      description: "Open access publications, research papers, and educational materials available for students and researchers",
-      icon: "Globe",
-      videoUrl: "https://youtu.be/qUlvdYaWSV4?si=SMGGZfu9dWkuVE9a"
-    },
-    {
-      title: "RNA-1",
-      description: "Open access publications, research papers, and educational materials available for students and researchers",
-      icon: "Globe",
-      videoUrl: "https://youtu.be/qERi39vZv2g?si=poKdCSwpQMIxQSij"
-    },
   ],
   
   
