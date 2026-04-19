@@ -103,15 +103,16 @@ export function GallerySection({ images }: GallerySectionProps) {
   // Don't render until client-side
   if (!isClient) {
     return (
-      <section className="py-16 px-4 md:px-8 lg:px-16 bg-gradient-to-br from-background via-background/95 to-background/90">
+      <section className="py-20 px-4 md:px-8 lg:px-16 bg-gradient-to-b from-background via-primary/3 to-background">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
           <ScrollReveal direction="up">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent mb-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 Gallery
               </h2>
-              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              <div className="h-1 w-20 bg-gradient-to-r from-primary to-accent mx-auto rounded-full mb-6" />
+              <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
                 A collection of memorable moments, achievements, and highlights from my academic journey
               </p>
             </div>
@@ -127,14 +128,15 @@ export function GallerySection({ images }: GallerySectionProps) {
   }
 
   return (
-    <section className="py-16 px-4 md:px-8 lg:px-16 bg-gradient-to-br from-background via-background/95 to-background/90">
+    <section className="py-20 px-4 md:px-8 lg:px-16 bg-gradient-to-b from-background via-primary/3 to-background">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent mb-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             Gallery
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <div className="h-1 w-20 bg-gradient-to-r from-primary to-accent mx-auto rounded-full mb-6" />
+          <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
             A collection of memorable moments, achievements, and highlights from my academic journey
           </p>
         </div>
@@ -143,34 +145,31 @@ export function GallerySection({ images }: GallerySectionProps) {
           {/* Carousel Header */}
           <div className="flex items-center justify-between mb-8">
             <div>
-              <h3 className="text-2xl font-bold bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+              <h3 className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 Photo Gallery
               </h3>
             </div>
             
             {/* Navigation Controls */}
-            <div className="flex gap-2">
+            <div className="flex gap-3">
               <Button
-                variant="outline"
                 size="icon"
                 onClick={() => scrollToImage('left')}
-                className="hover:bg-primary/10 hover:border-primary/30 transition-all duration-300"
+                className="bg-gradient-to-r from-primary/20 to-accent/20 hover:from-primary/30 hover:to-accent/30 border border-primary/30 hover:border-primary/50 text-primary transition-all duration-300 hover:scale-110"
               >
                 <ChevronLeft className="w-4 h-4" />
               </Button>
               <Button
-                variant="outline"
                 size="icon"
                 onClick={toggleAutoScroll}
-                className="hover:bg-primary/10 hover:border-primary/30 transition-all duration-300"
+                className="bg-gradient-to-r from-primary/20 to-accent/20 hover:from-primary/30 hover:to-accent/30 border border-primary/30 hover:border-primary/50 text-primary transition-all duration-300 hover:scale-110"
               >
                 {isAutoScrolling ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
               </Button>
               <Button
-                variant="outline"
                 size="icon"
                 onClick={() => scrollToImage('right')}
-                className="hover:bg-primary/10 hover:border-primary/30 transition-all duration-300"
+                className="bg-gradient-to-r from-primary/20 to-accent/20 hover:from-primary/30 hover:to-accent/30 border border-primary/30 hover:border-primary/50 text-primary transition-all duration-300 hover:scale-110"
               >
                 <ChevronRight className="w-4 h-4" />
               </Button>
@@ -178,7 +177,7 @@ export function GallerySection({ images }: GallerySectionProps) {
           </div>
 
           {/* Fluid Image Container */}
-          <div className="relative overflow-hidden rounded-lg h-[35rem]">
+          <div className="relative overflow-hidden rounded-2xl h-[35rem] shadow-2xl">
             <div 
               ref={scrollContainerRef}
               className="flex gap-6 overflow-x-auto overflow-y-hidden h-full"
@@ -199,7 +198,7 @@ export function GallerySection({ images }: GallerySectionProps) {
                     maxWidth: `calc((100vw - 2rem) / ${visibleImages})`
                   }}
                 >
-                  <Card className="group relative overflow-hidden bg-gradient-to-br from-card to-card/80 hover:from-card/90 hover:to-card/70 transition-all duration-300 hover:scale-105 hover:shadow-2xl border-0 shadow-lg h-full">
+                  <Card className="group relative overflow-hidden bg-gradient-to-br from-primary/5 to-accent/5 hover:from-primary/15 hover:to-accent/15 transition-all duration-300 hover:scale-105 hover:shadow-2xl border border-primary/20 hover:border-primary/40 shadow-lg h-full">
                     {/* Gradient overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
                     
