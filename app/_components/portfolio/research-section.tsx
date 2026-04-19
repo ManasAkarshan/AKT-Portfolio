@@ -23,27 +23,32 @@ interface ResearchSectionProps {
 
 export function ResearchSection({ researchAreas, stats, publications, socialLinks }: ResearchSectionProps) {
   return (
-    <section id="research" className="py-16 bg-muted/50">
+    <section id="research" className="py-20 bg-gradient-to-b from-background via-accent/3 to-background">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal direction="up">
-            <h2 className="text-3xl font-bold text-center mb-12">Research & Publications</h2>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">Research & Publications</h2>
+              <div className="h-1 w-20 bg-gradient-to-r from-primary to-accent mx-auto rounded-full" />
+            </div>
           </ScrollReveal>
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
             <ScrollReveal direction="up" delay={100}>
-              <Card className="transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
+              <Card className="bg-gradient-to-br from-primary/5 to-accent/5 border border-primary/20 transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] hover:border-primary/40">
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <BookOpen className="w-5 h-5" />
+                  <CardTitle className="flex items-center gap-3 text-xl">
+                    <div className="p-2 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20">
+                      <BookOpen className="w-5 h-5 text-primary" />
+                    </div>
                     Thrust Areas
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3">
                     {researchAreas.map((area, index) => (
-                      <li key={index} className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-primary rounded-full"></div>
-                        {area}
+                      <li key={index} className="flex items-center gap-3">
+                        <div className="w-2 h-2 bg-gradient-to-r from-primary to-accent rounded-full flex-shrink-0"></div>
+                        <span className="text-muted-foreground leading-relaxed">{area}</span>
                       </li>
                     ))}
                   </ul>
@@ -51,31 +56,31 @@ export function ResearchSection({ researchAreas, stats, publications, socialLink
               </Card>
             </ScrollReveal>
             <ScrollReveal direction="up" delay={200}>
-              <Card className="transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
+              <Card className="bg-gradient-to-br from-accent/5 to-primary/5 border border-primary/20 transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] hover:border-primary/40">
                 <CardHeader>
-                  <CardTitle>Publication Stats</CardTitle>
+                  <CardTitle className="text-xl">Publication Stats</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
-                    <div className="flex justify-between">
-                      <span>Total Publications</span>
-                      <span className="font-semibold">{stats.totalPublications}+</span>
+                    <div className="flex justify-between items-center p-3 rounded-lg bg-primary/5">
+                      <span className="text-muted-foreground">Total Publications</span>
+                      <span className="font-bold text-lg text-primary">{stats.totalPublications}+</span>
                     </div>
-                    <div className="flex justify-between">
-                      <span>Research Articles</span>
-                      <span className="font-semibold">{stats.researchArticles}</span>
+                    <div className="flex justify-between items-center p-3 rounded-lg bg-accent/5">
+                      <span className="text-muted-foreground">Research Articles</span>
+                      <span className="font-bold text-lg text-accent">{stats.researchArticles}</span>
                     </div>
-                    <div className="flex justify-between">
-                      <span>Books Edited</span>
-                      <span className="font-semibold">{stats.booksEdited}</span>
+                    <div className="flex justify-between items-center p-3 rounded-lg bg-primary/5">
+                      <span className="text-muted-foreground">Books Edited</span>
+                      <span className="font-bold text-lg text-primary">{stats.booksEdited}</span>
                     </div>
-                    <div className="flex justify-between">
-                      <span>Book Chapters</span>
-                      <span className="font-semibold">{stats.bookChapters}</span>
+                    <div className="flex justify-between items-center p-3 rounded-lg bg-accent/5">
+                      <span className="text-muted-foreground">Book Chapters</span>
+                      <span className="font-bold text-lg text-accent">{stats.bookChapters}</span>
                     </div>
-                    <div className="flex justify-between">
-                      <span>Government/Magazine Articles</span>
-                      <span className="font-semibold">{stats.magazineArticles}+</span>
+                    <div className="flex justify-between items-center p-3 rounded-lg bg-primary/5">
+                      <span className="text-muted-foreground">Articles</span>
+                      <span className="font-bold text-lg text-primary">{stats.magazineArticles}+</span>
                     </div>
                   </div>
                 </CardContent>
@@ -83,20 +88,20 @@ export function ResearchSection({ researchAreas, stats, publications, socialLink
             </ScrollReveal>
           </div>
           <ScrollReveal direction="up">
-            <h3 className="text-2xl font-semibold mb-6">Recent Publications</h3>
+            <h3 className="text-3xl font-bold mb-8">Recent Publications</h3>
           </ScrollReveal>
           <div className="space-y-4">
             {publications.map((pub, index) => (
               <ScrollReveal key={index} direction="up" delay={index * 100}>
-                <Card className="transition-all duration-300 hover:shadow-lg hover:scale-[1.01]">
+                <Card className="bg-gradient-to-r from-primary/5 to-accent/5 border border-primary/20 transition-all duration-300 hover:shadow-2xl hover:scale-[1.01] hover:border-primary/40">
                   <CardContent className="p-6">
-                    <h4 className="font-semibold mb-2">"{pub.title}"</h4>
+                    <h4 className="font-semibold mb-3 text-foreground leading-relaxed">"{pub.title}"</h4>
                     <p className="text-sm text-muted-foreground mb-2">
-                      {pub.authors} ({pub.year})
+                      {pub.authors} <span className="font-medium text-primary">({pub.year})</span>
                     </p>
-                    <p className="text-sm text-muted-foreground mb-3">Published in *{pub.journal}*</p>
+                    <p className="text-sm font-medium text-accent mb-4">{pub.journal}</p>
                     {pub.doi && (
-                      <Button variant="outline" size="sm" className="gap-2 bg-transparent transition-all duration-300 hover:scale-105" asChild>
+                      <Button size="sm" className="gap-2 bg-gradient-to-r from-primary to-accent hover:from-primary/80 hover:to-accent/80" asChild>
                         <a href={pub.doi} target="_blank" rel="noopener noreferrer">
                           <ExternalLink className="w-3 h-3" />
                           View Paper
