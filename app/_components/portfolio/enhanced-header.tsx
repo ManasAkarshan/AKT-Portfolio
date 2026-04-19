@@ -63,11 +63,11 @@ export function EnhancedHeader({ name }: EnhancedHeaderProps) {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 transition-all duration-300">
       <div className="container mx-auto px-4 py-4">
         <nav className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <h1 className="text-xl font-bold">{name}</h1>
+            <h1 className="text-xl font-bold transition-all duration-300 hover:scale-105 cursor-default">{name}</h1>
           </div>
 
           {/* Desktop Navigation */}
@@ -77,8 +77,8 @@ export function EnhancedHeader({ name }: EnhancedHeaderProps) {
                 key={item.href}
                 onClick={() => handleLinkClick(item.href)}
                 className={cn(
-                  "text-sm font-medium hover:text-primary transition-colors",
-                  activeSection === item.href && "text-primary"
+                  "text-sm font-medium transition-all duration-300 hover:text-primary hover:scale-105",
+                  activeSection === item.href && "text-primary scale-105"
                 )}
               >
                 {item.label}

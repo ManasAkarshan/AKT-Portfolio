@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { BookOpen, ExternalLink } from "lucide-react"
 import type { Publication } from "@/app/types/portfolio"
+import { ScrollReveal } from "./scroll-reveal"
 
 interface ResearchSectionProps {
   researchAreas: string[]
@@ -25,76 +26,86 @@ export function ResearchSection({ researchAreas, stats, publications, socialLink
     <section id="research" className="py-16 bg-muted/50">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Research & Publications</h2>
+          <ScrollReveal direction="up">
+            <h2 className="text-3xl font-bold text-center mb-12">Research & Publications</h2>
+          </ScrollReveal>
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <BookOpen className="w-5 h-5" />
-                  Thrust Areas
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3">
-                  {researchAreas.map((area, index) => (
-                    <li key={index} className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-primary rounded-full"></div>
-                      {area}
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader>
-                <CardTitle>Publication Stats</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  <div className="flex justify-between">
-                    <span>Total Publications</span>
-                    <span className="font-semibold">{stats.totalPublications}+</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Research Articles</span>
-                    <span className="font-semibold">{stats.researchArticles}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Books Edited</span>
-                    <span className="font-semibold">{stats.booksEdited}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Book Chapters</span>
-                    <span className="font-semibold">{stats.bookChapters}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Government/Magazine Articles</span>
-                    <span className="font-semibold">{stats.magazineArticles}+</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-          <h3 className="text-2xl font-semibold mb-6">Recent Publications</h3>
-          <div className="space-y-4">
-            {publications.map((pub, index) => (
-              <Card key={index}>
-                <CardContent className="p-6">
-                  <h4 className="font-semibold mb-2">"{pub.title}"</h4>
-                  <p className="text-sm text-muted-foreground mb-2">
-                    {pub.authors} ({pub.year})
-                  </p>
-                  <p className="text-sm text-muted-foreground mb-3">Published in *{pub.journal}*</p>
-                  {pub.doi && (
-                    <Button variant="outline" size="sm" className="gap-2 bg-transparent" asChild>
-                      <a href={pub.doi} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="w-3 h-3" />
-                        View Paper
-                      </a>
-                    </Button>
-                  )}
+            <ScrollReveal direction="up" delay={100}>
+              <Card className="transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <BookOpen className="w-5 h-5" />
+                    Thrust Areas
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3">
+                    {researchAreas.map((area, index) => (
+                      <li key={index} className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-primary rounded-full"></div>
+                        {area}
+                      </li>
+                    ))}
+                  </ul>
                 </CardContent>
               </Card>
+            </ScrollReveal>
+            <ScrollReveal direction="up" delay={200}>
+              <Card className="transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
+                <CardHeader>
+                  <CardTitle>Publication Stats</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4">
+                    <div className="flex justify-between">
+                      <span>Total Publications</span>
+                      <span className="font-semibold">{stats.totalPublications}+</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Research Articles</span>
+                      <span className="font-semibold">{stats.researchArticles}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Books Edited</span>
+                      <span className="font-semibold">{stats.booksEdited}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Book Chapters</span>
+                      <span className="font-semibold">{stats.bookChapters}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Government/Magazine Articles</span>
+                      <span className="font-semibold">{stats.magazineArticles}+</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
+          </div>
+          <ScrollReveal direction="up">
+            <h3 className="text-2xl font-semibold mb-6">Recent Publications</h3>
+          </ScrollReveal>
+          <div className="space-y-4">
+            {publications.map((pub, index) => (
+              <ScrollReveal key={index} direction="up" delay={index * 100}>
+                <Card className="transition-all duration-300 hover:shadow-lg hover:scale-[1.01]">
+                  <CardContent className="p-6">
+                    <h4 className="font-semibold mb-2">"{pub.title}"</h4>
+                    <p className="text-sm text-muted-foreground mb-2">
+                      {pub.authors} ({pub.year})
+                    </p>
+                    <p className="text-sm text-muted-foreground mb-3">Published in *{pub.journal}*</p>
+                    {pub.doi && (
+                      <Button variant="outline" size="sm" className="gap-2 bg-transparent transition-all duration-300 hover:scale-105" asChild>
+                        <a href={pub.doi} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="w-3 h-3" />
+                          View Paper
+                        </a>
+                      </Button>
+                    )}
+                  </CardContent>
+                </Card>
+              </ScrollReveal>
             ))}
           </div>
 

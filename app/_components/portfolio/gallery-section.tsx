@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { ChevronLeft, ChevronRight, Image as ImageIcon, Pause, Play } from "lucide-react"
+import { ScrollReveal } from "./scroll-reveal"
 
 interface GalleryImage {
   id: string
@@ -105,14 +106,16 @@ export function GallerySection({ images }: GallerySectionProps) {
       <section className="py-16 px-4 md:px-8 lg:px-16 bg-gradient-to-br from-background via-background/95 to-background/90">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent mb-4">
-              Gallery
-            </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              A collection of memorable moments, achievements, and highlights from my academic journey
-            </p>
-          </div>
+          <ScrollReveal direction="up">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent mb-4">
+                Gallery
+              </h2>
+              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                A collection of memorable moments, achievements, and highlights from my academic journey
+              </p>
+            </div>
+          </ScrollReveal>
           
           {/* Loading placeholder */}
           <div className="flex justify-center items-center h-64">

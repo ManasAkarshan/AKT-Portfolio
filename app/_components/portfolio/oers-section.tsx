@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { ExternalLink, BookOpen, Users, Globe } from "lucide-react"
 import { useState, useEffect } from "react"
 import { getYouTubeVideoTitle, extractVideoId } from "@/lib/youtube-utils"
+import { ScrollReveal } from "./scroll-reveal"
 
 interface OERsSectionProps {
   oersData: {
@@ -65,19 +66,21 @@ export function OERsSection({ oersData, socialLinks, channelUrl }: OERsSectionPr
     <section id="oers" className="py-16 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
-              Open Educational Resources (OERs)
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary/60 mx-auto rounded-full" />
-          </div>
+          <ScrollReveal direction="up">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+                Open Educational Resources (OERs)
+              </h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary/60 mx-auto rounded-full" />
+            </div>
+          </ScrollReveal>
           
           {/* Three divs in grid view */}
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {oersData.map((oer, index) => {
               return (
+              <ScrollReveal key={index} direction="up" delay={index * 100}>
               <Card 
-                key={index} 
                 className="relative overflow-hidden bg-gradient-to-br from-card to-card/80 hover:from-card/90 hover:to-card/70 transition-all duration-300 hover:shadow-2xl border-0 shadow-lg"
               >
                 {/* Card header with enhanced styling */}
@@ -136,6 +139,7 @@ export function OERsSection({ oersData, socialLinks, channelUrl }: OERsSectionPr
                   )}
                 </CardContent>
               </Card>
+              </ScrollReveal>
             );
             })}
           </div>
