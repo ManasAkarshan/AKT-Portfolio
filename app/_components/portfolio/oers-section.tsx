@@ -43,7 +43,6 @@ export function OERsSection({ oersData, socialLinks, channelUrl }: OERsSectionPr
         setVideoTitles(titles)
       } catch (error) {
         console.error('Error fetching video titles:', error)
-        // Fallback to original titles if API fails
         setVideoTitles(oersData.map(oer => oer.title))
       } finally {
         setIsLoading(false)
@@ -60,44 +59,37 @@ export function OERsSection({ oersData, socialLinks, channelUrl }: OERsSectionPr
     }))
   }
 
-
-
   return (
-    <section id="oers" className="py-16 bg-muted/30">
+    <section id="oers" className="py-20 bg-gradient-to-b from-background via-accent/3 to-background">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal direction="up">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
-                Open Educational Resources (OERs)
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                Open Educational Resources
               </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary/60 mx-auto rounded-full" />
+              <div className="h-1 w-20 bg-gradient-to-r from-primary to-accent mx-auto rounded-full" />
             </div>
           </ScrollReveal>
           
-          {/* Three divs in grid view */}
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {oersData.map((oer, index) => {
               return (
               <ScrollReveal key={index} direction="up" delay={index * 100}>
               <Card 
-                className="relative overflow-hidden bg-gradient-to-br from-card to-card/80 hover:from-card/90 hover:to-card/70 transition-all duration-300 hover:shadow-2xl border-0 shadow-lg"
+                className="relative overflow-hidden bg-gradient-to-br from-primary/5 to-accent/5 hover:from-primary/10 hover:to-accent/10 transition-all duration-300 hover:shadow-2xl border border-primary/20 hover:border-primary/40 shadow-lg h-full"
               >
-                {/* Card header with enhanced styling */}
                 <CardHeader className="pb-3">
-                  <CardTitle className="text-lg text-center font-bold bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent transition-all duration-300 min-h-[3rem] flex items-center justify-center line-clamp-2">
+                  <CardTitle className="text-lg text-center font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent transition-all duration-300 min-h-[3rem] flex items-center justify-center line-clamp-2">
                     {!isLoading && videoTitles[index] ? videoTitles[index] : oer.title}
                   </CardTitle>
                 </CardHeader>
                 
-                {/* Video container with enhanced styling */}
                 <CardContent className="p-4">
                   {oer.videoUrl && (
                     <div className="space-y-4">
-                      {/* Video Player or Thumbnail */}
                       <div className="aspect-video w-full relative overflow-hidden bg-black rounded-lg">
                         {playingVideos[index] ? (
-                          /* Embedded Video Player */
                           <iframe
                             src={`https://www.youtube.com/embed/${extractVideoId(oer.videoUrl)}?autoplay=1`}
                             title={!isLoading && videoTitles[index] ? videoTitles[index] : oer.title}
@@ -107,7 +99,6 @@ export function OERsSection({ oersData, socialLinks, channelUrl }: OERsSectionPr
                             allowFullScreen
                           />
                         ) : (
-                          /* Thumbnail with Play Button */
                           <>
                             <img
                               src={`https://img.youtube.com/vi/${extractVideoId(oer.videoUrl)}/maxresdefault.jpg`}
@@ -121,7 +112,6 @@ export function OERsSection({ oersData, socialLinks, channelUrl }: OERsSectionPr
                                 }
                               }}
                             />
-                            {/* Play Button Overlay */}
                             <div className="absolute inset-0 flex items-center justify-center">
                               <button
                                 onClick={() => toggleVideo(index)}
@@ -133,8 +123,6 @@ export function OERsSection({ oersData, socialLinks, channelUrl }: OERsSectionPr
                           </>
                         )}
                       </div>
-                      
-
                     </div>
                   )}
                 </CardContent>
@@ -143,71 +131,22 @@ export function OERsSection({ oersData, socialLinks, channelUrl }: OERsSectionPr
             );
             })}
           </div>
-          {/* View All on YouTube Button */}
           {channelUrl && (
-            <div className="text-center mt-8 mb-8">
+            <div className="text-center mt-12 mb-8">
               <Button 
-                variant="outline" 
                 size="lg"
-                className="gap-3 bg-gradient-to-r from-red-500/10 to-red-600/10 hover:from-red-500/20 hover:to-red-600/20 border-red-500/30 hover:border-red-500/50 text-red-600 hover:text-red-500 transition-all duration-300 group"
+                className="gap-3 bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 transition-all duration-300 hover:scale-105 group shadow-lg"
                 asChild
               >
-                <a href={channelUrl} target="_blank" rel="noopener noreferrer">
-                  <ExternalLink className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
+                <a href={channelUrl} target="_blank" rel="noopener noreferrer" className="text-white">
+                  <ExternalLink className="w-4 h-4 group-hover:scale-110 transition-transform duration-300 " />
                   View All Videos on YouTube
                 </a>
               </Button>
             </div>
           )}
-
-          {/* Three buttons */}
-          {/* <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            {socialLinks.orcid && (
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="gap-3 min-w-[200px] bg-gradient-to-r from-orange-500/10 to-orange-600/10 hover:from-orange-500/20 hover:to-orange-600/20 border-orange-500/30 hover:border-orange-500/50 text-orange-600 hover:text-orange-500 transition-all duration-300 group" 
-                asChild
-              >
-                <a href={socialLinks.orcid} target="_blank" rel="noopener noreferrer">
-                  <ExternalLink className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
-                  ORCID
-                </a>
-              </Button>
-            )}
-            
-            {socialLinks.googleScholar && (
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="gap-3 min-w-[200px] bg-gradient-to-r from-blue-500/10 to-blue-600/10 hover:from-blue-500/20 hover:to-blue-600/20 border-blue-500/30 hover:border-blue-500/50 text-blue-600 hover:text-blue-500 transition-all duration-300 group" 
-                asChild
-              >
-                <a href={socialLinks.googleScholar} target="_blank" rel="noopener noreferrer">
-                  <ExternalLink className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
-                  Google Scholar
-                </a>
-              </Button>
-            )}
-            
-            {socialLinks.researchGate && (
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="gap-3 min-w-[200px] bg-gradient-to-r from-green-500/10 to-green-600/10 hover:from-green-500/20 hover:to-green-600/20 border-green-500/30 hover:border-green-500/50 text-green-600 hover:text-green-500 transition-all duration-300 group" 
-                asChild
-              >
-                <a href={socialLinks.researchGate} target="_blank" rel="noopener noreferrer">
-                  <ExternalLink className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
-                  ResearchGate
-                </a>
-              </Button>
-            )}
-          </div> */}
-
-          
         </div>
       </div>
     </section>
   )
-} 
+}

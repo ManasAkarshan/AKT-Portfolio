@@ -9,29 +9,35 @@ interface ExperienceSectionProps {
 
 export function ExperienceSection({ experience }: ExperienceSectionProps) {
   return (
-    <section id="experience" className="py-16">
+    <section id="experience" className="py-20 bg-gradient-to-b from-background via-primary/3 to-background">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal direction="up">
-            <h2 className="text-3xl font-bold text-center mb-12">Professional Experience</h2>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">Professional Experience</h2>
+              <div className="h-1 w-20 bg-gradient-to-r from-primary to-accent mx-auto rounded-full" />
+            </div>
           </ScrollReveal>
           <div className="space-y-8">
             {experience.map((exp, index) => (
               <ScrollReveal key={index} direction="up" delay={index * 100}>
-                <Card className="transition-all duration-300 hover:shadow-lg hover:scale-[1.01]">
+                <Card className="bg-gradient-to-br from-primary/5 to-accent/5 border border-primary/20 transition-all duration-300 hover:shadow-2xl hover:scale-[1.01] hover:border-primary/40 h-full">
                   <CardHeader>
-                    <div className="flex justify-between items-start">
+                    <div className="flex justify-between items-start gap-4">
                       <div>
-                        <CardTitle className="text-xl">{exp.title}</CardTitle>
-                        <CardDescription className="text-lg">{exp.organization}</CardDescription>
+                        <CardTitle className="text-2xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">{exp.title}</CardTitle>
+                        <CardDescription className="text-base text-muted-foreground mt-2">{exp.organization}</CardDescription>
                       </div>
-                      <Badge className="transition-all duration-300 hover:scale-105">{exp.period}</Badge>
+                      <Badge className="bg-gradient-to-r from-primary/30 to-accent/30 text-primary border border-primary/40 transition-all duration-300 hover:scale-110 whitespace-nowrap">{exp.period}</Badge>
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                    <ul className="space-y-3 text-muted-foreground">
                       {exp.responsibilities.map((responsibility, idx) => (
-                        <li key={idx}>{responsibility}</li>
+                        <li key={idx} className="flex gap-3 items-start">
+                          <span className="inline-block w-2 h-2 rounded-full bg-gradient-to-r from-primary to-accent mt-2 flex-shrink-0" />
+                          <span className="leading-relaxed">{responsibility}</span>
+                        </li>
                       ))}
                     </ul>
                   </CardContent>

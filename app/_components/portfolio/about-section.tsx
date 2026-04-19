@@ -12,26 +12,28 @@ interface AboutSectionProps {
 
 export function AboutSection({ bio, specializations, title, institution }: AboutSectionProps) {
   return (
-    <section id="about" className="py-16">
+    <section id="about" className="py-20 bg-gradient-to-br from-background to-primary/3">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal direction="up">
-            <h2 className="text-3xl font-bold text-center mb-12">About Me</h2>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">About Me</h2>
+              <div className="h-1 w-20 bg-gradient-to-r from-primary to-accent mx-auto rounded-full" />
+            </div>
           </ScrollReveal>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <ScrollReveal direction="up" delay={100}>
               <div>
                 {bio.map((paragraph, index) => (
-                  <p key={index} className="text-lg text-muted-foreground mb-6">
+                  <p key={index} className="text-base md:text-lg text-muted-foreground mb-6 leading-relaxed">
                     {paragraph}
                   </p>
                 ))}
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-3 mt-8">
                   {specializations.map((spec, index) => (
                     <Badge 
                       key={index} 
-                      variant="secondary" 
-                      className="transition-all duration-300 hover:scale-105 hover:shadow-md cursor-default"
+                      className="bg-gradient-to-r from-primary/20 to-accent/20 text-primary border border-primary/30 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:from-primary/30 hover:to-accent/30 cursor-default"
                     >
                       {spec}
                     </Badge>
@@ -41,29 +43,35 @@ export function AboutSection({ bio, specializations, title, institution }: About
             </ScrollReveal>
             <ScrollReveal direction="up" delay={200}>
               <div className="space-y-6">
-                <Card className="transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
-                  <CardContent className="p-6">
-                    <div className="flex items-center gap-4 mb-4">
-                      <GraduationCap className="w-8 h-8 text-primary transition-transform duration-300 hover:scale-110" />
+                <Card className="bg-gradient-to-br from-primary/5 to-accent/5 border border-primary/20 shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] hover:border-primary/40 h-full">
+                  <CardContent className="p-8">
+                    <div className="flex items-start gap-4 mb-6">
+                      <div className="p-3 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20">
+                        <GraduationCap className="w-6 h-6 text-primary" />
+                      </div>
                       <div>
-                        <h3 className="font-semibold">Current Position</h3>
-                        <p className="text-sm text-muted-foreground">
+                        <h3 className="font-semibold text-foreground">Current Position</h3>
+                        <p className="text-sm text-muted-foreground mt-1">
                           {title}, {institution}
                         </p>
                       </div>
                     </div>
-                    <div className="flex items-center gap-4  mb-4">
-                      <BookOpen className="w-8 h-8 text-primary transition-transform duration-300 hover:scale-110" />
+                    <div className="flex items-start gap-4 mb-6">
+                      <div className="p-3 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20">
+                        <BookOpen className="w-6 h-6 text-primary" />
+                      </div>
                       <div>
-                        <h3 className="font-semibold">Research Focus</h3>
-                        <p className="text-sm text-muted-foreground">Insect Biodiversity & Ecology</p>
+                        <h3 className="font-semibold text-foreground">Research Focus</h3>
+                        <p className="text-sm text-muted-foreground mt-1">Insect Biodiversity & Ecology</p>
                       </div>
                     </div>
-                    <div className="flex items-center gap-4">
-                      <Waypoints className="w-8 h-8 text-primary transition-transform duration-300 hover:scale-110" />
+                    <div className="flex items-start gap-4">
+                      <div className="p-3 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20">
+                        <Waypoints className="w-6 h-6 text-primary" />
+                      </div>
                       <div>
-                        <h3 className="font-semibold">Fellow and Member</h3>
-                        <p className="text-sm text-muted-foreground">ISCA, IETE, MSET</p>
+                        <h3 className="font-semibold text-foreground">Fellow and Member</h3>
+                        <p className="text-sm text-muted-foreground mt-1">ISCA, IETE, MSET</p>
                       </div>
                     </div>
                   </CardContent>

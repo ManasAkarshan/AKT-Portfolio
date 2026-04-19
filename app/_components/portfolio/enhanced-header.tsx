@@ -63,28 +63,30 @@ export function EnhancedHeader({ name }: EnhancedHeaderProps) {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 transition-all duration-300">
+    <header className="sticky top-0 z-50 w-full border-b border-primary/10 bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60 transition-all duration-300 shadow-sm">
       <div className="container mx-auto px-4 py-4">
         <nav className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <h1 className="text-xl font-bold transition-all duration-300 hover:scale-105 cursor-default">{name}</h1>
+            <h1 className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent transition-all duration-300 hover:scale-105 cursor-default">{name}</h1>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden md:flex items-center space-x-1">
             {navigationItems.map((item) => (
               <button
                 key={item.href}
                 onClick={() => handleLinkClick(item.href)}
                 className={cn(
-                  "text-sm font-medium transition-all duration-300 hover:text-primary hover:scale-105",
-                  activeSection === item.href && "text-primary scale-105"
+                  "text-sm font-medium px-3 py-2 rounded-lg transition-all duration-300 hover:bg-primary/10 hover:text-primary",
+                  activeSection === item.href && "bg-primary/15 text-primary"
                 )}
               >
                 {item.label}
               </button>
             ))}
-            <ModeToggle />
+            <div className="ml-4">
+              <ModeToggle />
+            </div>
           </div>
 
           {/* Mobile Navigation */}
@@ -115,16 +117,16 @@ export function EnhancedHeader({ name }: EnhancedHeaderProps) {
                 <div className="flex flex-col h-full justify-between">
                   {/* Navigation */}
                   <div className="pl-4">
-                    <nav className="flex flex-col gap-1">
+                    <nav className="flex flex-col gap-2">
                       {navigationItems.map((item) => (
                         <button
                           key={item.href}
                           onClick={() => handleLinkClick(item.href)}
                           className={cn(
-                            "w-full text-left text-base font-medium py-2 px-4 rounded-md",
-                            "hover:bg-accent hover:text-accent-foreground",
+                            "w-full text-left text-base font-medium py-3 px-4 rounded-lg transition-all duration-300",
+                            "hover:bg-primary/10 hover:text-primary",
                             activeSection === item.href
-                              ? "bg-muted text-primary"
+                              ? "bg-primary/15 text-primary"
                               : "text-muted-foreground"
                           )}
                         >
@@ -135,26 +137,26 @@ export function EnhancedHeader({ name }: EnhancedHeaderProps) {
                   </div>
 
                   {/* Divider */}
-                  <hr className="my-6 border-muted" />
+                  <hr className="my-6 border-primary/10" />
 
                   {/* Contact */}
-                  <div className="bg-secondary p-4 ">
-                    <h3 className="text-sm font-semibold text-muted-foreground mb-2 tracking-wide uppercase">
+                  <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg p-4 border border-primary/20">
+                    <h3 className="text-sm font-semibold text-primary mb-3 tracking-wide uppercase">
                       Quick Contact
                     </h3>
-                    <ul className="space-y-1 text-sm text-muted-foreground">
+                    <ul className="space-y-2 text-sm text-muted-foreground">
                       <li>
                         <a
-                          href="mailto:akthakur.ranchiuniv@gmail.com"
-                          className="hover:text-primary"
+                          href="mailto:fmruanand@gmail.com"
+                          className="hover:text-primary transition-colors duration-300"
                         >
                           fmruanand@gmail.com
                         </a>
                       </li>
                       <li>
                         <a
-                          href="tel:+919835984490"
-                          className="hover:text-primary"
+                          href="tel:+919835056547"
+                          className="hover:text-primary transition-colors duration-300"
                         >
                           +91 98350 56547
                         </a>
