@@ -72,6 +72,13 @@ export const professorData: ProfessorData = {
   ],
   publications: [
     {
+      title: "Book - Economic Insects of Jharkhand Vol. 1",
+      authors: "Dr. Anand Kumar Thakur & Dr. Seema Keshari",
+      journal: "Ashalok Trust Publication, Ranchi (ISBN: 978-81-982354-3-5)",
+      year: "2026",
+      doi: ""
+    },
+    {
       title: "Comperative assesment of different rearring diets on the developmental and reproductive behaviour of Fall Armyworm Spodoptera frugiperda, (Lepidoptera: Noctuidae)",
       authors: "A.K. Thakur, Banra, S., Chaudhary, J.S. et al.",
       journal: "Neotropical Entomology [SCOPUS, IF:1.0]",
@@ -101,6 +108,13 @@ export const professorData: ProfessorData = {
     }
   ],
   awards: [
+    {
+      title: "Excellence in Research and Innovation Achievement Award",
+      organization: "2-day National Seminar, Jharkhand College (Vinoba Bhave University, Hazaribag), Giridih",
+      year: "2026",
+      description: "Recognized for excellence in research and innovation.",
+      certificateUrl: ""
+    },
     {
       title: "Senior Scientist Award",
       organization: "9th International Conference GUR-BMR",
@@ -272,6 +286,12 @@ export const professorData: ProfessorData = {
     src: "/WhatsApp Image 2025-07-11 at 10.18.24 PM.jpeg",
     alt: "Professional achievement",
     title: "Professional Achievement"
+  },
+  {
+    id: "16",
+    src: "/WhatsApp Image 2026-05-06 at 11.19.12 AM.jpeg",
+    alt: "Award certificate",
+    title: "Achievement Award Certificate"
   }
 ]
 
