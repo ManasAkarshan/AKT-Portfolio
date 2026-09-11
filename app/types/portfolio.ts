@@ -29,6 +29,15 @@ export interface Award {
   certificateUrl?: string
 }
 
+export interface Project {
+  title: string
+  fundingAgency: string
+  position: string
+  amount: string
+  duration: string
+  status?: string
+}
+
 export interface ContactInfo {
   email: string
   phone: string
@@ -60,6 +69,7 @@ export interface ProfessorData {
   education: Education[]
   experience: Experience[]
   publications: Publication[]
+  projects: Project[]
   awards: Award[]
   contact: ContactInfo
   stats: {

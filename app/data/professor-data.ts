@@ -107,6 +107,30 @@ export const professorData: ProfessorData = {
       doi: ""
     }
   ],
+  projects: [
+    {
+      title: "Studies on the Diversity, Ecological Networks, Functional Role and Gut Microbiota of Nectar-Feeding Nocturnal Pollinator Insects (Arthropoda: Insecta) in Agro-Ecosystems of the Ranchi Plateau, Jharkhand, India",
+      fundingAgency: "JCSTI, DHTE, Govt. of Jharkhand, Ranchi",
+      position: "PI",
+      amount: "₹5,45,000.00",
+      duration: "2026–2029",
+      status: "Ongoing"
+    },
+    {
+      title: "Science & Technology Communication Popularization & its Extension (SCoPE) in tribal area through Community Radio",
+      fundingAgency: "Vigyan Prasar, DST, Govt. of India, New Delhi",
+      position: "PI",
+      amount: "₹30,60,000.00",
+      duration: "2022–23"
+    },
+    {
+      title: "Qualitative and Quantitative analysis of the effect of HADIYA (a local beverage) on the behaviour of people both male & female (educated and uneducated) of tribes of Jharkhand",
+      fundingAgency: "UGC, ERO, Kolkata",
+      position: "PI",
+      amount: "₹1,14,000.00",
+      duration: "2009–10"
+    }
+  ],
   awards: [
     {
       title: "Excellence in Research and Innovation Achievement Award",
@@ -292,6 +316,12 @@ export const professorData: ProfessorData = {
     src: "/WhatsApp Image 2026-05-06 at 11.19.12 AM.jpeg",
     alt: "Award certificate",
     title: "Achievement Award Certificate"
+  },
+  {
+    id: "17",
+    src: "/image.png",
+    alt: "Hindustan newspaper coverage of nocturnal pollinator insect research",
+    title: "Hindustan Coverage"
   }
 ]
 

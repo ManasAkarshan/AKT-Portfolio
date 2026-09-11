@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
-import { GraduationCap, BookOpen, Waypoints } from "lucide-react"
+import { GraduationCap, BookOpen, Waypoints, Briefcase } from "lucide-react"
 import { ScrollReveal } from "./scroll-reveal"
 
 interface AboutSectionProps {
@@ -53,6 +53,17 @@ export function AboutSection({ bio, specializations, title, institution }: About
                         <h3 className="font-semibold text-foreground">Current Position</h3>
                         <p className="text-sm text-muted-foreground mt-1">
                           {title}, {institution}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-4 mb-6">
+                      <div className="p-3 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20">
+                        <Briefcase className="w-6 h-6 text-primary" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-foreground">Additional Position</h3>
+                        <p className="text-sm text-muted-foreground mt-1">
+                          Director, Student Art and Culture, Ranchi University
                         </p>
                       </div>
                     </div>

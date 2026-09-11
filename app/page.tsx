@@ -5,6 +5,7 @@ import { AboutSection } from "./_components/portfolio/about-section"
 import { EducationSection } from "./_components/portfolio/education-section"
 import { ExperienceSection } from "./_components/portfolio/experience-section"
 import { ResearchSection } from "./_components/portfolio/research-section"
+import { ProjectsSection } from "./_components/portfolio/projects-section"
 import { AwardsSection } from "./_components/portfolio/awards-section"
 import { ProfessionalActivities } from "./_components/portfolio/professional-activities"
 import { OERsSection } from "./_components/portfolio/oers-section"
@@ -61,6 +62,8 @@ export default function ProfessorPortfolio() {
           researchGate: professorData.contact.researchGate
         }}
       />
+
+      <ProjectsSection projects={professorData.projects} />
 
       <AwardsSection awards={professorData.awards} />
 
