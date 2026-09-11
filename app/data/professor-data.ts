@@ -322,6 +322,18 @@ export const professorData: ProfessorData = {
     src: "/image.png",
     alt: "Hindustan newspaper coverage of nocturnal pollinator insect research",
     title: "Hindustan Coverage"
+  },
+  {
+    id: "18",
+    src: "/Screenshot 2026-09-11 221750.png",
+    alt: "Newspaper coverage of lecture on digital content authoring tools at IIT",
+    title: "Digital Content Lecture Coverage"
+  },
+  {
+    id: "19",
+    src: "/Screenshot 2026-09-11 221849.png",
+    alt: "Newspaper coverage of SLS Recognition Award 2026",
+    title: "SLS Recognition Award Coverage"
   }
 ]
 
